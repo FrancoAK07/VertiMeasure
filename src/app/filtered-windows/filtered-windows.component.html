@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-back-button defaultHref="/"></ion-back-button>
+		</ion-buttons>
+		<ion-title> {{ currentWindowType }} </ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+	<ion-header collapse="condense">
+		<ion-toolbar>
+			<ion-title size="large">{{ currentWindowType }}</ion-title>
+		</ion-toolbar>
+	</ion-header>
+	<ng-container *ngFor="let item of windowsArray">
+		<app-window-card
+			[windowName]="item.window_nameCode"
+			[timestamp]="item.captured_at"
+			[width_ft]="item.width_ft"
+			[width_in]="item.width_in"
+			[height_in]="item.height_in"
+			[height_in]="item.height_in"
+			[imageUrl]="'https://picsum.photos/800/450'"
+			[latitude]="item.latitude"
+			[longitud]="item.longitude">
+		</app-window-card>
+	</ng-container>
+</ion-content>

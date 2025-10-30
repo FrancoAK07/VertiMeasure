@@ -1,0 +1,13 @@
+<ion-card class="card">
+	<div class="image-area">
+		<img *ngIf="imageUrl" [src]="imageUrl" alt="Card image" />
+	</div>
+
+	<ion-card-header>
+		<ion-card-title>{{ windowName }}</ion-card-title>
+		<div>dimensions in Feet: {{`${width_ft}ft x ${height_ft}ft` }}</div>
+		<div>dimensions in Inches: {{`${width_in}in x ${height_in}in` }}</div>
+		<div class="timestamp" *ngIf="timestamp">{{ timestamp }}</div>
+		<div><ion-icon aria-hidden="true" name="pin"></ion-icon>: {{ latitude }} &nbsp; &nbsp; {{ longitud }}</div>
+	</ion-card-header>
+</ion-card>
