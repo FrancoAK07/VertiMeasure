@@ -5,11 +5,6 @@
 </ion-header>
 
 <ion-content class="home-content" [fullscreen]="true">
-	<ion-header collapse="condense">
-		<ion-toolbar>
-			<ion-title size="large">Tab 1</ion-title>
-		</ion-toolbar>
-	</ion-header>
 	<ng-container *ngFor="let item of myArray">
 		<app-window-card
 			[windowName]="item.window_nameCode"
